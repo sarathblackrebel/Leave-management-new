@@ -1,0 +1,911 @@
+<body><div id="WzTtDiV" style="visibility: hidden; position: absolute; overflow: hidden; padding: 0px; width: 0px; left: 0px; top: 0px;"></div>
+
+<!--- Google Analytics -->
+
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+
+
+
+
+
+
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-80522424-2', 'auto',{
+		  	'clientId': 'UKF_student_155_NADIYA MOL'
+		  });
+		</script>
+	<script type="text/javascript">
+
+$(document).ready(function()
+{
+	var menu = 'mymark';
+	var action = 'list';
+	if (menu != '') 
+	{
+		if (action != '') 
+		{
+			ga('send', {
+		  		hitType: 'pageview',
+		  		page: location.pathname,
+		  		dimension1: 'UKF',      // colege_code
+		  		college_code: 'UKF',
+		  		title:'UKF:mymark->list',
+		  		dimension2:'ADMIN',   // department
+		  		dimension3:'mymark->list', // Original Title
+		  		dimension4:'NADIYA MOL', // Admin's name
+		  		dimension5:'STUDENT'  // User type
+			});
+		}
+		else
+		{
+			ga('send', {
+		  		hitType: 'pageview',
+		  		page: location.pathname,
+		  		dimension1: 'UKF',      // colege_code
+		  		title:'UKF:mymark',
+		  		dimension2:'ADMIN',   // department
+		  		dimension3:'mymark', // Original Title
+		  		dimension4:'NADIYA MOL', // Admin's name
+		  		dimension5:'STUDENT'  // User type
+			});
+		}
+	}
+
+});
+	
+</script>
+
+
+<!-- Google Analytics End -->
+
+
+<script type="text/javascript" src="../libcommon/script/baloon/wz_tooltip.js"></script>
+
+<div class="row main-header">
+    
+    <div class="col-md-5 college_title"> UKF College of Engineering &amp; Technology
+  </div>
+      <div class="col-md-7">
+        <ul class="top-menu pull-right">
+          <li>
+              <a href="student.php?menu=home">
+                <span class="glyphicon glyphicon-home"></span>
+                &nbsp; Home
+              </a>
+            </li>
+          <li class="active">
+              <a href="student.php?menu=mymark&amp;action=list">
+                <span class="glyphicon glyphicon-signal"></span>
+                &nbsp; My performance
+              </a>
+          </li>
+          <li>
+            <a href="student.php?menu=sdocuments">
+              <span class="glyphicon glyphicon-file"></span>
+                &nbsp; Documents
+            </a>
+          </li><li class="hidden dropdown notification-dropdown" id="htw_dropdown_view">
+                    <a id="dLabel" class="notification-globe-btn" role="button" data-toggle="dropdown" data-target="#">
+                        <i class="glyphicon glyphicon-gift notification-globe"></i>
+                    </a>
+                   <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel">
+                        <div class="notification-heading">
+                            <h4 class="menu-title">Notifications</h4>
+                            <a class="viewallurl" href="">
+                                <h4 class="menu-title pull-right">View all
+                                    <i class="glyphicon glyphicon-circle-arrow-right notify-arrow-right"></i>
+                                </h4>
+                            </a>
+                        </div>
+                        <li class="divider"></li>
+                        <img class="notification-loader" id="notification_loader" src="../libcommon/images/ajax_load.gif">
+                        <div class="notifications-wrapper">
+
+                        </div>
+                    <li class="divider"></li>
+                    <div class="notification-footer">
+                        <a class="viewallurl" href="">
+                            <h4 class="menu-title">View all
+                                <i class="glyphicon glyphicon-circle-arrow-right notify-arrow-right"></i>
+                            </h4>
+                        </a>
+                    </div>
+				  </ul>
+                </li>
+<script type="text/javascript">
+
+    $('.notification-globe-btn').on('click', function (event) {
+        event.stopPropagation();
+        $("#notification_loader").show();
+        $('.notifications-wrapper').hide();
+        $('.notification-dropdown').toggleClass('open');
+        var dataString = "";
+        //alert(dataString);
+        $.ajax({
+            type: "GET",
+            url: '../libcommon/notification/notification_dropdown.php',
+            data: dataString,
+            success: function (response) {
+                setTimeout(
+                    function () {
+                        $("#notification_loader").hide();
+                        $('.notifications-wrapper').show();
+                        $('.notifications-wrapper').html(response);
+                    }, 500);
+            }
+        });
+        return false;
+    });
+
+
+    function nowMoment(date, id) {
+        var NowDate = new Date(date).toISOString();
+        $('#moment' + id).html(moment(NowDate).from(new Date().toISOString()));
+    }
+
+    function unreadNotificationCount() {
+        var is_valid_count_in_local_storage = false;
+        var now = moment(new Date().toISOString()); //todays date
+        var count_from_local_storage = localStorage.getItem('notification_count');
+        if (count_from_local_storage) {
+            var local_storage_last_updated = moment(localStorage.getItem('notification_count_updated'));
+            var duration = moment.duration(now.diff(local_storage_last_updated));
+            var hours = Math.round(duration.asHours());
+            if (hours <= '1') {
+                if (count_from_local_storage >= 1) {
+                    $('.notification-globe').append("<i class=\"badge badge-notify\">" + count_from_local_storage + "</i>");
+                    is_valid_count_in_local_storage = true;
+                }
+            }
+        }
+        if (is_valid_count_in_local_storage == false) {
+
+            $.get('../libcommon/notification/unread_notification_count.php', function (response) {
+                response = $.trim(response);
+                if (response != '0') {
+                    $('.notification-globe').append("<i class=\"badge badge-notify\">" + response + "</i>");
+                }
+                localStorage.setItem('notification_count_updated', new Date().toISOString());
+                localStorage.setItem('notification_count', response);
+            });
+        }
+    }
+
+</script>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <span class="glyphicon glyphicon-off">
+            </span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="student.php?menu=home">
+                  <b class="truncate">NADIYA MOL</b>
+                </a>
+              </li>
+              <li>
+                <a href="student.php?menu=home">
+                  <span class="glyphicon glyphicon-user"></span>
+                  &nbsp; My Account
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="index.php?act=logout">
+                  <span class="glyphicon glyphicon-log-out" title="Logout"></span>
+                  &nbsp; Logout
+                </a>
+              </li>
+            </ul>
+                </li>
+            </ul>
+         </div></div>
+<script type="text/javascript">
+	$( document ).ready(function() {
+    	unreadNotificationCount()
+	});
+	var menu = 'mymark';
+	var action = 'list';
+	if (menu != '') 
+	{
+		if (action != '') 
+		{
+			ga('send', {
+		  		hitType: 'pageview',
+		  		page: location.pathname,
+		  		dimension1: 'UKF',      // colege_code
+		  		title:'UKF:mymark->list',
+		  		dimension2:'ADMIN',   // department
+		  		dimension3:'mymark->list',  // original page title
+		  		dimension4:'NADIYA MOL',  //User's name
+		  		dimension5:'STUDENT'  // User type
+			});
+		}
+		else
+		{
+			ga('send', {
+		  		hitType: 'pageview',
+		  		page: location.pathname,
+		  		dimension1: 'UKF',      // colege_code
+		  		title:'UKF:mymark',
+		  		dimension2:'ADMIN',   // department
+		  		dimension3:'mymark',  // original page title
+		  		dimension4:'NADIYA MOL',  //User's name
+		  		dimension5:'STUDENT'  // User type
+			});
+		}
+	}
+	
+</script>
+<div class="container-fluid">
+	<div class="row">
+		
+<ol class="breadcrumb top-nav"></ol>	
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 left-menu">	
+				<style type="text/css">
+	.pic_space{
+		width : 60%;
+		border-radius: 3px;
+	}
+	.common_pic{
+		height: 70%;
+		width : 70%;
+		border-radius: 50%;
+	}
+</style>
+
+
+
+    
+<div class="row">      
+	<div class="list-group-item text-center profile_pic"> 
+	
+              		<center>
+	              		<a href="student.php?menu=home">         
+	            			<img src="../libcommon/images/user_profile_male.jpg" class="common_pic">
+	              		</a>
+              		</center>  </div>
+</div>
+	          
+		   
+	      
+
+  <div class="sidebar-nav">
+	<div class="nav">  
+ 
+	<div class="list-group nav"><a class="list-group-item" href="?menu=student_details&amp;action=frm_edit"><b>Profile Settings</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=mydocs&amp;action=list"><b>My Documents</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=attendance&amp;action=tview"><b>Attendance</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=asimark&amp;action=list"><b>Assignment Mark</b></a></div><div class="list-group nav"><a class="list-group-item active" href="?menu=mymark&amp;action=list"><b>My Performance</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=studentboardexammark&amp;action=view"><b>University Results</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=hosteltransport&amp;action=hostel"><b>Hostel &amp; Transport</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=message&amp;action=send"><b>Messages</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=studentiso"><b>Rules and Regulations</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=committee&amp;action=list"><b>Committee</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=evaluation"><b>Evaluation</b></a></div><div class="list-group nav"><a class="list-group-item" href="?menu=job&amp;action=from_clg"><b>Job</b></a></div><div class="nav list-group"><div id="htw_leave"><a class="list-group-item" href="?menu=leave&amp;action=apply"><b>Leave Management</b></a></div></div><div class="nav list-group"><div id="htw_dynamicfeedback"><a class="list-group-item" href="?menu=dynamicfeedback&amp;action=dynamicfeed"><b>Feedback</b></a></div></div>	</div>
+</div>
+			</div>
+			
+			<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 main-content">
+				
+<script type="text/javascript">
+    function selectSemester(selectobj, url, div) {
+
+        $('#' + div).hide();
+        $('#loader').show();
+        var dataString = "semID=" + selectobj + "&bid=" + $('#bid').val();
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: dataString,
+            success: function (response) {
+                //$('form#newsletter').hide();
+                $('#' + div).html(response).fadeIn('slow');
+                $('#loader').hide();
+                if ($(window).width() < 800) {
+                    $('table').stickyHead();
+                }
+            }
+        });
+        return false;
+    }
+
+    $(document).ready(function () {
+        $('#loader').hide();
+    });
+</script>
+<div class="panel panel-primary">
+			<div class="panel-heading no-padding-left-xs">My Performance</div>
+				<div class="panel-body no-padding min-h-15rem">
+				<div id="no-more-tables" class="table-responsive table-no-border-top no-border">
+	<div class="well well-sm">
+	<div class="row">
+		<div class="col-md-5 no-padding-left-xs no-padding-right-xs">
+		<div class="input-group">
+			<b>Current Semester:</b>&nbsp;
+			<select name="semID" class="form-control input-sm" id="semID" onchange="selectSemester(this.value,'mymark/ajax_mark_details.php','mark_div')" ;"="">";
+			<option value="0">---</option><option value="1">S1</option><option value="2">S2</option><option value="3">S3</option><option value="4">S4</option><option value="5">S5</option><option value="6">S6</option><option value="7">S7</option><option value="8" selected="">S8</option><option value="9">S9</option><option value="10">S10</option><option value="11">S11</option><option value="12">Course Completed</option></select>	</div>	
+		</div>
+	</div>
+	</div>
+<div class=""><input type="hidden" id="bid" value="20"><input type="hidden" id="stid" value="155"><div id="loader" class="text-center" style="display: none;"><img src="../libcommon/images/custom1/ajax_load.gif"></div><div id="mark_div"><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       project review
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 1
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       SERIES I
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       SERIES II
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 2
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       SERIES III
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       REVISION TEST 1
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       Model Exam
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       Revision Test II
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       Revision Test III
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 3
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 4
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 5
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 6
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 7
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 8
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 9
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST 10
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CLASS TEST I
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       LIFESKILLS
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       CE 100
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       Class Test1
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       LAB EXAM
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       First Series Examination
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       Series 1
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       ClassTest1
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br><table class="table table-striped flexible-table padding-55 student-data-table" cellpadding="0" cellspacing="0" border="0" align="left"><thead class="cf " id="">
+                <tr class="table-name">
+                    <th colspan="5">
+                       Series1
+                    </th>
+                </tr><tr class="main-head hidden-on-mobile">
+                    <th id="left">Subject Name</th>
+                    <th class="numeric" id="mid">Marks Obtained</th>
+                    <th class="numeric" id="mid">Percentage</th>
+                    <th class="numeric" id="mid">Class Average</th>
+                    <th class="numeric" id="right">Max Marks</th>
+                </tr>
+             </thead>
+        <tbody class="normal-title"></tbody>
+                    <tfoot class="text-align-center">
+                        <tr>
+                            <td align="center" class="no-table-data" colspan="5">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </tfoot></table><br></div></div></div></div></div><script type="text/javascript">
+    $(document).ready(function () {
+        if ($(window).width() < 800) {
+            $('table').stickyHead();
+        }
+    });
+</script>
+			</div>	
+		</div>	
+	</div>
+
+	<div class="row">
+		
+<script type="text/javascript">
+
+  $(document).ready(function()
+  {
+    var measure = $('.footer');
+        windowHeight = $(window).height();
+        divOffsetTop = measure.offset().top;
+        delta = windowHeight - divOffsetTop - 40;
+        if(delta > 0)
+          $('.footer').css("margin-top", delta);
+  });
+
+</script>
+<div class="footer">
+  <span> <a href="http://linways.com/" target="_blank" title="Linways">Powered
+      by Linways Technologies Pvt. Ltd.</a>
+    <div class="pull-right" style="color: #ffffff; font-size: 10px;">
+     Product Version :2.17.6 PROFESSIONAL   </div>
+  </span>
+
+</div>
+
+			
+	</div>
+	
+</div>
+
+
+</body>

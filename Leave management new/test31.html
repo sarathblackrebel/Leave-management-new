@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> leave rules</title>
+<link rel="stylesheet" href="./CSS/style.css">
+  <body>
+
+    <header>
+      <div class="container">
+        <div id="top">
+          <h1>Welcome</h1>
+        </div>
+        <nav>
+         <ul>
+           <li><a href="login.html">Log Out</a></li>
+         </ul>
+       </nav>
+    </div>
+    </header>
+    <div class="sidenav">
+      <a href="#leavestatus">Leave Status</a>
+      <a href="leave.html">Apply for Leave</a>
+      <a href="rule.html">Leave Rules</a>
+      <a href="password.html">Change Password</a>
+    </div>
+      <form method="POST"action="test3.php">
+    <!--<form action="/action_page.php">-->
+    <section id="box" style="overflow:hidden">
+       Today:
+       <input type="date" name="today" id="today">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       To:
+       <input type="date" name="to" placeholder="DD/MM/YY" ><br><br>
+       <tr
+       <td>Type of leave</td>
+       <td><select name="LEAVE">
+        <option value="CL">CL</option>
+        <option value="DL">DL</option>
+        <option value="ML">MATL</option>
+        <option value="VL">VL</option>
+        <option value="HL">HL</option>
+        <option value="CO">CO</option>
+        <option value="WO">WO</option>
+        <option value="UE">UE</option>
+      </select></td>
+      </tr><br><br>
+          Reason for leave:
+          <textarea rows="2" cols="20" name="reason"></textarea><br><br>
+          class arrangements:
+          <td><br><br>Hour</td>
+          <td><select name="Hour">
+            <option value="h0">Select</option>
+           <option value="h1">1</option>
+           <option value="h2">2</option>
+           <option value="h3">3</option>
+           <option value="h4">4</option>
+           <option value="h5">5</option>
+           <option value="h6">6</option>
+           <option value="h7">7</option>
+           <option value="h8">8</option>
+         </select></td>
+         <td>&nbsp;&nbsp;Semester</td>
+         <td><select name="Semester">
+           <option value="sem0">Select</option>
+          <option value="sem1">S1</option>
+          <option value="sem2">S2</option>
+          <option value="sem3">S3</option>
+          <option value="sem4">S4</option>
+          <option value="sem5">S5</option>
+          <option value="sem6">S6</option>
+          <option value="sem7">S7</option>
+          <option value="sem8">S8</option>
+        </select></td>
+        <td>&nbsp;&nbsp;Faculty Name</td>
+        <td><select name="FN">
+          <option value="FO">Select</option>
+         <option value="F1">SARATH</option>
+         <option value="F2">NADIYA</option>
+         <option value="F3">EBRAHIM</option>
+         <option value="F4">ATHUL</option>
+         <option value="F5">RASHID</option>
+          </select></td>
+
+      <br><br><br><br>  <input type="submit" value="SUBMIT" >
+    </section>
+    </form> <br><br>
+    </body>
+    </html>

@@ -1,0 +1,413 @@
+<body style="width:100%;margin:auto;min-width:600px;max-width:2000px;overflow:scroll;overflow-x:hidden" bgcolor="#F2F2F2">
+
+<table width="100%" border="0" align="center" class="Content_Text" bgcolor="#F2F2F2">  
+  <tbody><tr><td valign="top" width="100%" colspan="3">
+ <table width="100%" border="0" bordercolor="#0000FF" align="center" bgcolor="#B43000"> <tbody><tr>
+    <td colspan="4" style="text-align:center;" width="100%" height="145"><img src="https://research.keralauniversity.ac.in/examsImages/Images/Header_Image/Logo29.jpg" width="999" height="145" usemap="#imagemap" style="border:none">
+	<map name="imagemap">
+          <area shape="rect" coords="42,14,135,117" href="http://www.keralauniversity.ac.in/" target="_blank">
+		  <area shape="rect" coords="684,51,993,84" href="http://www.kucc.keralauniversity.ac.in/" target="_blank">
+	</map>
+</td>    
+  </tr>
+ </tbody></table></td></tr>
+  <tr><td width="10%">&nbsp;
+  
+  </td>
+  <td width="80%">
+  
+<link rel="stylesheet" type="text/css" href="https://exams.keralauniversity.ac.in/Css/pro_dropdown_2.css">
+
+
+<script type="text/javascript">
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<span class="preload1"></span>
+<span class="preload2"></span>
+
+<ul id="nav">
+	
+    <li class="top"><a href="index.php" class="top_link"><span style="font-size:12px" class="fontStyle">Home</span></a></li>
+    <li class="top"><a href="https://exams.keralauniversity.ac.in/Login/stud_session.php?el=1" class="top_link"><span style="font-size:12px" class="fontStyle">Enrolment</span></a></li>
+
+			
+	
+			
+			
+	<li class="top"><a href="https://exams.keralauniversity.ac.in/Login/stud_session.php" class="top_link"><span class="fontStyle" style="font-size:12px">Student</span></a></li>
+    	<li class="top"><a href="https://exams.keralauniversity.ac.in/Login/chkLogin.php?log" class="top_link"><span class="fontStyle" style="font-size:12px">College</span></a></li>
+   	<li class="top"><a href="https://exams.keralauniversity.ac.in/Login/chkLogin.php?log" class="top_link"><span class="fontStyle" style="font-size:12px">University Staff</span></a></li>
+	<li class="top"><a href="https://exams.keralauniversity.ac.in/ResultAnalysis/ResultAnalysis.php" class="top_link"><span class="fontStyle" style="font-size:12px">Result Analysis</span></a></li>
+   	<li class="top"><a href="https://exams.keralauniversity.ac.in/Login/index.php?reslt " class="top_link"><span class="fontStyle" style="font-size:12px">Results</span></a></li>
+ <!--li class="top"><a href="https://exams.keralauniversity.ac.in/timetable.php"  class="top_link" target="_blank"><span class="fontStyle" style="font-size:12px">Time Table</span></a-->
+ 	<li class="top"><a href="https://exams.keralauniversity.ac.in/indexcard/" class="top_link"><span class="fontStyle" style="font-size:12px">Index Card</span></a></li>
+
+<!--li class="top"><a href="https://exams.keralauniversity.ac.in/SAME/" class="top_link"><span class="fontStyle" style="font-size:14px">Index Card</span></a></li-->
+	<li class="top"><a href="https://exams.keralauniversity.ac.in/Login/index.php?dwnld" class="top_link"><span class="fontStyle" style="font-size:12px">Downloads</span></a></li>
+	<li class="top"><a href="https://exams.keralauniversity.ac.in/Login/index.php?abt" class="top_link"><span class="fontStyle" style="font-size:12px">People</span></a></li>  
+   	<li class="top"><a href="https://exams.keralauniversity.ac.in/Login/index.php?about" class="top_link"><span class="fontStyle" style="font-size:12px">About us</span></a></li>
+</ul>
+
+
+
+  </td><td width="10%">&nbsp;
+  
+  </td>
+  </tr>
+  <tr>
+  <td width="10%">&nbsp;
+  
+  </td>
+   <td width="80%" bgcolor="#FFFFFF">
+   <table width="100%" border="0" height="400">
+   <tbody><tr>
+ 
+   
+       <td width="20%" valign="top" bgcolor="#FFFFFF">
+    <table align="left" width="100%" border="0" style="margin-left:0;vertical-align:top" height="400">
+  <tbody><tr><td valign="top" width="25%">
+  
+<div class="suckerdiv1" align="left">
+<ul id="suckertree1" style="line-height:30px">
+
+<li> <div style="background-image:url(https://research.keralauniversity.ac.in/examsImages/Images/button.png);height:29px;width:100%;text-align:center;text-shadow:inherit;text-decoration:blink;text-transform:capitalize;background-repeat:no-repeat">
+<table border="0" style="width:100%;">
+<tbody><tr><td width="100%" style="padding-left:8px">
+<font color="#FFFFFF" face="Calibri" size="3"><b>Important Links</b></font></td></tr></tbody></table> </div></li>
+	
+		
+		<li><a href="http://www.keralauniversity.ac.in/news" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;What's New</a></li>
+		<li><a href="http://www.keralauniversity.ac.in/news" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Announcements</a></li>
+		<li><a href="https://exams.keralauniversity.ac.in/Login/index.php?noti"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Notifications</a></li>
+       		<li><a href="https://exams.keralauniversity.ac.in/Login/index.php?ex"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0">&nbsp;  Exam Fees </a></li>
+     		<li><a href="https://exams.keralauniversity.ac.in/Login/index.php?timetab"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Time Table</a></li>
+  		<li><a href="http://www.keralauniversity.ac.in/press-release" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Press Release</a></li>
+		<li><a href="https://exams.keralauniversity.ac.in/Login/index.php?course"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Courses</a></li>
+		<li><a href="https://exams.keralauniversity.ac.in/Login/index.php?college"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Colleges</a></li>
+		<li><a href="https://exams.keralauniversity.ac.in/Login/index.php?site"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Sitemap</a></li>
+            	<li><a href="https://exams.keralauniversity.ac.in/Login/index.php?faq"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;FAQ</a></li>
+                <li><a href="https://exams.keralauniversity.ac.in/Login/userSession.php?cntct"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Help Desk</a></li>
+				 <li><a href="https://exams.keralauniversity.ac.in/Login/index.php?help"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Contact Us</a></li>
+ 
+                <!--li><a href="http://keralauniversity.ac.in/results.html" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;Results</a></li-->
+
+           
+                <li><a href="http://research.keralauniversity.ac.in" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Research</a></li>
+                <li><a href="http://admissions.keralauniversity.ac.in" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Admissions</a></li>     
+                <li><a href="http://kucc.keralauniversity.ac.in" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Computer Centre</a></li>
+				
+		<li><a href="http://www.ku.directverify.in" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"> &nbsp;Online Verification</a></li>
+					<!--li><a href="https://exams.keralauniversity.ac.in/application/Application_for_improving_sessional.pdf" > <img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;CA Imp-S1S2</a></li-->
+						<!-- <li><a href="https://exams.keralauniversity.ac.in/Login/index.php?imp=1"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;CA Improvement</a></li>
+				<li><a href="http://exams.keralauniversity.ac.in/Login/index.php?reset=1" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;Password Changing</a></li>-->
+                
+                <!--li><a href="http://exams.keralauniversity.ac.in/Sde/" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;SDE Candidates</a></li>
+                <li><a href="http://exams.keralauniversity.ac.in/Privatestudy/" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;Private Candidates</a></li-->
+<!--
+<li><a href="https://exams.keralauniversity.ac.in/Mphil" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;MPhil Entrance</a></li>-->
+<!--<li><a href="https://exams.keralauniversity.ac.in/VisualArts" target="_blank"><img src="https://research.keralauniversity.ac.in/examsImages/Images/button4.png" border="0"/> &nbsp;Visual Arts Entrance</a></li>-->
+
+</ul>   
+</div>
+
+
+ 
+</td></tr> </tbody></table></td>
+<td width="80%" valign="top" align="center"><table border="0" align="center" width="100%" style="margin-left:0;vertical-align:top"><tbody><tr><td align="center" valign="top">
+          <script type="text/javascript">
+			function clearpage()
+			{
+			//alert("MMM");
+			//document.getElementById('txtstudname').value="";
+			document.getElementById('txtstudpwd').value="";
+			document.getElementById('course').focus();
+			
+			}
+			
+            window.onload =clearpage;
+            </script>
+                   
+           
+<form name="loginform_col" id="loginform_col" method="POST" action="stud_session.php">
+             <table width="98%" border="0" class="Content_Text" bgcolor="#FFFFFF">
+			 <tbody><tr height="1">
+			   <td class="Content_Text"><br></td>
+		     </tr>
+			 <tr height="1">
+			   <td class="Content_Text headerLabel" style="font-weight:bold;"><div><font color="#999999">LOGIN</font> </div></td>
+	      </tr>
+			 <tr>
+			 <td valign="top" class="Content_Text">
+             <div></div>             <div align="center">		
+				<table border="0" class="Content_Text" cellpadding="2" cellspacing="2" style="vertical-align:middle;" background="https://research.keralauniversity.ac.in/examsImages/Images/gradient97356293.png" width="400" height="200">
+				 
+				  	
+				                   
+                  					                    <tbody><tr> 
+						<td class="error_msg" colspan="6" width="100%"><span style="padding-left:40px;">&nbsp; </span></td>
+				  </tr>
+						
+					
+                                        
+                     <tr>
+                   <td width="200" valign="top" class="Content_Text_Bold"><font color="#FFFFFF" style="font-size:11px;">
+			       <div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Course</div>
+                   </font></td>
+					
+					
+					<td width="238" valign="top" align="left">
+										 <select name="course" id="course" style="width:80%;" onchange="listspecialization(this.value)">
+					 <option value="0">-Select-</option>
+					 							<option value="101">MA </option>
+								  							<option value="102">MSc</option>
+								  							<option value="103">MTA</option>
+								  							<option value="104">MCom</option>
+								  							<option value="105">MBA</option>
+								  							<option value="106">MSW</option>
+								  							<option value="109">LLB</option>
+								  							<option value="110">MCA
+</option>
+								  							<option value="111">MTech
+</option>
+								  							<option value="112">MPA</option>
+								  							<option value="113">MPlan
+</option>
+								  							<option value="114">MArch</option>
+								  							<option value="201">BTech
+</option>
+								  							<option value="202">BArch</option>
+								  							<option value="203">B.P.Ed</option>
+								  							<option value="204">B.Voc</option>
+								  							<option value="205">BHM</option>
+								  							<option value="206">BMS</option>
+								  							<option value="209">LLM</option>
+								  							<option value="301">B Sc
+</option>
+								  							<option value="302">BBA
+</option>
+								  							<option value="303">BCom
+</option>
+								  							<option value="304">BA</option>
+								  							<option value="306">BCA
+</option>
+								  							<option value="307">BPA</option>
+								  							<option value="310">BSW</option>
+								  							<option value="401">BEd</option>
+								  							<option value="406">M.Ed.</option>
+								  							<option value="411">MPEd</option>
+								  							<option value="412">MCJ
+</option>
+								  							<option value="413">MLISc
+</option>
+								  							<option value="600">MVA </option>
+								  							<option value="601">BFA </option>
+								  							<option value="998">Other</option>
+								  					 </select>
+					
+				  </td></tr>	
+				  <tr>
+				  <td width="200" valign="top" class="Content_Text_Bold"><font color="#FFFFFF" style="font-size:11px;">
+			      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specialization
+                   </font></td>
+				   <td width="238" valign="top" align="left">
+				   <div id="specialization" name="specialization">
+										 <select name="course" id="course" style="width:80%;">
+					 <option value="0">-Select-</option>
+					 							<option value="1001">Philosophy</option>
+								  							<option value="1002">Sanskrit Special</option>
+								  							<option value="1003">Sanskrit Language &amp; Literature</option>
+								  							<option value="1004">Malayalam Language &amp; Literature</option>
+								  							<option value="1005">Tamil Language &amp; Literature</option>
+								  							<option value="1006">Hindi Language &amp; Literature</option>
+								  							<option value="1007">English Language &amp; Literature</option>
+								  							<option value="1008">Arabic Language &amp; Literature</option>
+								  							<option value="1009">History</option>
+								  							<option value="1010">Islamic History</option>
+								  							<option value="1011">Politics</option>
+								  							<option value="1012">Economics</option>
+								  							<option value="1013">Business Economics</option>
+								  							<option value="1014">Sociology</option>
+								  							<option value="1015">Psychology</option>
+								  							<option value="1016">Fine Arts</option>
+								  							<option value="1017">Music</option>
+								  							<option value="1018">Public Administration</option>
+								  							<option value="1019">Personal Management</option>
+								  							<option value="1020">.</option>
+								  							<option value="1021">Management</option>
+								  							<option value="1022">Geography</option>
+								  							<option value="1023">Geology</option>
+								  							<option value="1024">English  Language &amp; Literature</option>
+								  							<option value="1025">Mathematics</option>
+								  							<option value="1026">Statistics</option>
+								  							<option value="1027">Physics</option>
+								  							<option value="1028">Chemistry</option>
+								  							<option value="1029">Analytical Chemistry</option>
+								  							<option value="1030">Applied Chemistry</option>
+								  							<option value="1031">Bio - Chemistry</option>
+								  							<option value="1032">Botany</option>
+								  							<option value="1033">Zoology</option>
+								  							<option value="1034">Home Science(Family Resource Management)</option>
+								  							<option value="1035">Dance</option>
+								  							<option value="1036">Physical Education</option>
+								  							<option value="1037">Home Science(Extension Education)</option>
+								  							<option value="1038">Social Work</option>
+								  							<option value="1039">Psychiatric Social Work</option>
+								  							<option value="1040">Home Science(Food &amp; Nutrition)</option>
+								  							<option value="1041">Environmental Science</option>
+								  							<option value="1042">Tourism Administration</option>
+								  							<option value="1043">Banking</option>
+								  							<option value="1044">Polymer Chemistry</option>
+								  							<option value="1045">Travel and Tourism</option>
+								  							<option value="1046">Part Time</option>
+								  							<option value="1047">Evening</option>
+								  							<option value="1048">Full Time</option>
+								  							<option value="1049">Bio-Informatics</option>
+								  							<option value="1050">Food and Dairy Biotechnology</option>
+								  							<option value="1051">Medicinal Chemistry</option>
+								  							<option value="1052">Integrated Five Year B.A. LL.B Degree Course</option>
+								  							<option value="1053">Unitary Degree Course in Law</option>
+								  							<option value="1054">Unitary Degree Course in Law (Evening)</option>
+								  							<option value="1055">Music (Veena)</option>
+								  							<option value="1056">Music (Violin)</option>
+								  							<option value="1057">Music (Mridangam)</option>
+								  							<option value="1058">Dance (Kerala Nadanam)</option>
+								  							<option value="1063">English</option>
+								  							<option value="1064">Malayalam</option>
+								  							<option value="1065">Social Science</option>
+								  							<option value="1066">Hindi</option>
+								  							<option value="1067">Arabic</option>
+								  							<option value="1068">Natural Science</option>
+								  							<option value="1069">Physical Science</option>
+								  							<option value="1070">Commerce</option>
+								  							<option value="1071">Tamil</option>
+								  							<option value="1072">Sanskrit</option>
+								  							<option value="1073">Home Science</option>
+								  							<option value="1074">Special Education [Intellectual Disability]</option>
+								  							<option value="1101">Malayalam and Mass Communication</option>
+								  							<option value="1107">English And Communicative English </option>
+								  							<option value="1111">Commerce with Computer Application</option>
+								  							<option value="1118">Mass Communication and Journalism</option>
+								  							<option value="1123">Commerce &amp; Tax Procedure And Practice</option>
+								  							<option value="1124">Environmental Science &amp; Environment And Water Management  </option>
+								  							<option value="1131">Chemistry And Industrial Chemistry</option>
+								  							<option value="1132">Hotel Management And Catering Science</option>
+								  							<option value="1135">Botany And Biotechnology </option>
+								  							<option value="1141">Physics And Computer Application </option>
+								  							<option value="1146">Commerce &amp; Tourism And Travel Management</option>
+								  							<option value="1147">Commerce &amp; Hotel Management And Catering</option>
+								  							<option value="1148">Bio-Technology</option>
+								  							<option value="1149">Regular ( Evening )</option>
+								  							<option value="1150">Integrated BM - MAM</option>
+								  							<option value="1151">Five Year MBA (Integrated)</option>
+								  							<option value="1155">Bio-chemistry And Industrial Microbiology   </option>
+								  							<option value="1156">Political Science</option>
+								  							<option value="1157">Malayalam: Language, Culture &amp; Literature</option>
+								  							<option value="1158">Sanskrit General</option>
+								  							<option value="1159">Tamil</option>
+								  							<option value="1160">Vocal</option>
+								  							<option value="1161">Veena</option>
+								  							<option value="1162">Violin</option>
+								  							<option value="1163">Mridangam</option>
+								  							<option value="1164">Hotel Management</option>
+								  							<option value="2001">Civil Engineering</option>
+								  							<option value="2002">Polymer Technology</option>
+								  							<option value="2003">Mechanical  Engineering</option>
+								  							<option value="2004">Mechanical Stream - Production  Engineering</option>
+								  							<option value="2005">Mechanical Stream - Automobile  Engineering</option>
+								  							<option value="2006">Mechanical Stream - Industrial  Engineering</option>
+								  							<option value="2007">Chemical  Engineering</option>
+								  							<option value="2008">Bio-Technology and Bio-Chemical Engineering</option>
+								  							<option value="2009">Aeronautical Engineering</option>
+								  							<option value="2011">Electrical &amp; Electronics  Engineering</option>
+								  							<option value="2012">Electronics &amp; Communication  Engineering</option>
+								  							<option value="2013">Applied Electronics &amp; Instrumentation  Engineering</option>
+								  							<option value="2015">Computer Science &amp;  Engineering</option>
+								  							<option value="2016">Information Technology</option>
+								  							<option value="2017">Civil Engineering (PT)</option>
+								  							<option value="2018">Mechanical  Engineering (PT)</option>
+								  							<option value="2019">Electrical &amp; Electronics  Engineering (PT)</option>
+								  							<option value="2020">Electronics &amp; Communication  Engineering (PT)</option>
+								  							<option value="2021">Computer Science &amp;  Engineering (PT)</option>
+								  							<option value="2031">CE(Structural Engineering)</option>
+								  							<option value="2032">CE(Environmental Engineering)</option>
+								  							<option value="2033">CE(Geotechnical Engineering)</option>
+								  							<option value="2034">CE(Traffic and Transportation Engineering)</option>
+								  							<option value="2035">CE(Structural Enginnering and Construction Management)</option>
+								  							<option value="2036">CE(Hydraulics Engineering)</option>
+								  							<option value="2037">CE(Geoinformatics)</option>
+								  							<option value="2038">ME(Industrial Engineering)</option>
+								  							<option value="2039">ME(Machine Design)</option>
+								  							<option value="2040">ME(Propulsion Engineering)</option>
+								  							<option value="2041">ME(Thermal Science)</option>
+								  							<option value="2042">ME(Industrial Refrigeration and Cryogenic Engineering)</option>
+								  							<option value="2043">ME(Computer Integrated Manufacturing)</option>
+								  							<option value="2044">EEE(Control Systems)</option>
+								  							<option value="2045">EEE(Guidance and Navigational Control)</option>
+								  							<option value="2046">EEE(Power Systems)</option>
+								  							<option value="2047">EEE(Electrical Machines)</option>
+								  							<option value="2048">EEE(Industrial Instrumentaion and Control)</option>
+								  							<option value="2049">ECE(Applied Electronics and Instrumentation)</option>
+								  							<option value="2050">ECE(Microwave and TV Engineering)</option>
+								  							<option value="2051">ECE(Signal Processing)</option>
+								  							<option value="2052">ECE(Embedded Systems)</option>
+								  							<option value="2053">BB(Molecular Medicine)</option>
+								  							<option value="2054">ECE(Telecommunication Engineering)</option>
+								  							<option value="2055">.</option>
+								  							<option value="2056">IT(Network Engineering)</option>
+								  							<option value="2057">CE(Geotechnical Engineering - PT)</option>
+								  							<option value="2058">ME(Industrial Engineering - PT)</option>
+								  							<option value="2059">EEE(Control Systems - PT)</option>
+								  							<option value="2060">ME(Thermal Science - PT)</option>
+								  							<option value="2061">EEE(Power Systems - PT)</option>
+								  							<option value="2062">ECE(Microwave and TV Engineering - PT)</option>
+								  							<option value="2063">ECE - Communication Systems</option>
+								  							<option value="2064">CSE - Information Security</option>
+								  							<option value="2065">EEE - Power Control and Drives</option>
+								  							<option value="2066">Urban Design</option>
+								  							<option value="2067">ECE(Signal Processing -PT)</option>
+								  							<option value="2068">CE (Vehicle Design &amp; Road Safety Engineering )</option>
+								  							<option value="2069">ECE (Applied Electronics and Instrumentation -PT)</option>
+								  							<option value="2070">Computer Science &amp; Engineering ( PT )</option>
+								  							<option value="2071">Counselling Psychology</option>
+								  							<option value="2072">CE-Structural Engineering (PT)</option>
+								  							<option value="2073">ME-Machine Design (PT)</option>
+								  							<option value="2074">ME-Propulsion Engineering (PT)</option>
+								  							<option value="3001">Computer Science</option>
+								  							<option value="3002">Electronics</option>
+								  							<option value="3003">.</option>
+								  							<option value="3004">Microbiology</option>
+								  							<option value="3005">Technology Management</option>
+								  							<option value="3006">Syriac</option>
+								  							<option value="3007">Home Science(Nutrition &amp; Dietetics)</option>
+								  							<option value="3008">Malayalam with Media Studies</option>
+								  							<option value="3009">Human Resource Management</option>
+								  							<option value="3010">Integrated Five Year B.B.A LL.B Degree Course</option>
+								  							<option value="3011">Integrated Five Year B.Com  LL.B Degree Course</option>
+								  							<option value="3012">Sanskrit Special - Nyaya</option>
+								  							<option value="3013">Sanskrit Special - Vyakarana</option>
+								  							<option value="3014">Sanskrit Special - Jyothisha</option>
+								  							<option value="3015">Sanskrit Special - Sahithya</option>
+								  							<option value="3016">Sanskrit Special - Vedanta</option>
+								  							<option value="3017">Communicative Arabic</option>
+								  							<option value="3018">.</option>
+								  							<option value="3019">MicroBiology</option>
+								  							<option value="3020">Political Science</option>
+								  							<option value="4001">Art History</option>
+								  							<option value="4002">Painting</option>
+								  							<option value="6071">EEE( Power System &amp; Control )</option>
+								  							<option value="6072">Computer Science(HI)</option>
+								  							<option value="6073">(HI)</option>
+								  							<option value="6074">Software Development</option>
+								  							<option value="6075">Tourism and Hospitality Management</option>
+								  							<option value="9000">Aquatic Biology &amp; Fisheries - CSS</option>
+								  							<option value="9001">Arabic Language &amp; Literature  - CSS</option></select></div></td></tr></tbody></table></div></td></tr></tbody></table></form></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></body>
